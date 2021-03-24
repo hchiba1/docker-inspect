@@ -6,20 +6,9 @@ program
   .arguments('image')
   .parse(process.argv);
 
-if (program.args.length == 0) {
-  program.help();
-}
-// console.log(process.argv);
-
-const image = program.args[0];
-
-const images = child_process.execSync(`docker images -q`).toString().trim().split('\n');
-// console.log(images);
-
-// let result = child_process.execSync(`docker inspect ${image}`).toString();
-// JSON.parse(result).forEach((elem) => {
-//   console.log([elem.RepoTags[0], formatDate(elem.Created), humanReadable(elem.Size)].join('\t'));
-// });
+let images;
+images = child_process.execSync(`docker images -q`).toString().trim().split('\n');
+images = images.slice(0, 5);
 
 images.forEach((image) => {
   let result = child_process.execSync(`docker inspect ${image}`).toString();
