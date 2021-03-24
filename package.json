@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hchiba1/docker-inspect/issues"
   },
-  "homepage": "https://github.com/hchiba1/docker-inspect#readme"
+  "homepage": "https://github.com/hchiba1/docker-inspect#readme",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
 }
