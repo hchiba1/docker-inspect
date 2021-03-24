@@ -19,5 +19,8 @@
   "homepage": "https://github.com/hchiba1/docker-inspect#readme",
   "dependencies": {
     "commander": "^7.2.0"
+  },
+  "bin": {
+    "docker-inspect": "bin/docker-inspect.js"
   }
 }
